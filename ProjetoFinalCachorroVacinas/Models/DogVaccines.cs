@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ProjetoSPRO.Model
+namespace ProjetoFinalCachorroVacinas.Models
 {
     
     public class DogVaccines

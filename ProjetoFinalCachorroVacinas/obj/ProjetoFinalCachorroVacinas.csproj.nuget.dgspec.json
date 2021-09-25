@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj": {}
+    "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\GitSPRO\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj": {}
   },
   "projects": {
-    "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj": {
+    "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\GitSPRO\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj",
+        "projectUniqueName": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\GitSPRO\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj",
         "projectName": "ProjetoFinalCachorroVacinas",
-        "projectPath": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj",
+        "projectPath": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\GitSPRO\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas.csproj",
         "packagesPath": "C:\\Users\\TheAlgy\\.nuget\\packages\\",
-        "outputPath": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\obj\\",
+        "outputPath": "X:\\Diogo\\SPRO\\VISUAL ARCHIVES\\GitSPRO\\ProjetoFinalCachorroVacinas\\ProjetoFinalCachorroVacinas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TheAlgy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,9 +44,27 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

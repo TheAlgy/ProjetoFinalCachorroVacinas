@@ -2,7 +2,7 @@
 using System;
 using ProjetoFinalCachorroVacinas.Models;
 
-namespace ProjetoSPRO.Model
+namespace ProjetoFinalCachorroVacinas.Models
 {
 
     public class Person

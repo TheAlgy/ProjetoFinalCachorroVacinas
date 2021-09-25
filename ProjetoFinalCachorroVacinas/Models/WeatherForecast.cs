@@ -1,6 +1,6 @@
 using System;
 
-namespace ProjetoFinalCachorroVacinas
+namespace ProjetoFinalCachorroVacinas.Models
 {
     public class WeatherForecast
     {

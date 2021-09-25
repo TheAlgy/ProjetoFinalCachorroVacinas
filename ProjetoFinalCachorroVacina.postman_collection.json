@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/Dogs",
+							"raw": "https://localhost:5001/api/Dogs/ListDogs",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -22,7 +22,8 @@
 							"port": "5001",
 							"path": [
 								"api",
-								"Dogs"
+								"Dogs",
+								"ListDogs"
 							]
 						}
 					},
@@ -63,7 +64,19 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -74,7 +87,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"id\": 2,\r\n        \"dogRace\": \"Salsicha\",\r\n        \"dogName\": \"Spike\",\r\n        \"gender\": \"masculino\",\r\n        \"dogVaccines\": [\r\n            {\r\n                \"id\": 2,\r\n                \"type\": \"Vacina De Raiva\",\r\n                \"value\": \"string\"\r\n            }\r\n        ]\r\n    }",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"dogRace\": \"Vira-Lata\",\r\n    \"dogName\": \"Amarelinho\",\r\n    \"gender\": \"M\",\r\n    \"dogVaccines\": [\r\n        {\r\n            \"id\": 1,\r\n            \"type\": \"Vacina De Raiva\",\r\n            \"value\": \"Sim\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -82,7 +95,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/Dogs/PutDogById/3",
+							"raw": "https://localhost:5001/api/Dogs/PutDogById/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -92,7 +105,7 @@
 								"api",
 								"Dogs",
 								"PutDogById",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -104,7 +117,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/Dogs/DeleteDogsById/3",
+							"raw": "https://localhost:5001/api/Dogs/DeleteDogById/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -113,8 +126,8 @@
 							"path": [
 								"api",
 								"Dogs",
-								"DeleteDogsById",
-								"3"
+								"DeleteDogById",
+								"1"
 							]
 						}
 					},
@@ -127,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dogRace\": \"string\",\r\n  \"dogName\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"dogVaccines\": [\r\n    {\r\n      \"type\": \"string\",\r\n      \"value\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n  \"dogRace\": \"Pastor Alemão\",\r\n  \"dogName\": \"Pitoco\",\r\n  \"gender\": \"M\",\r\n  \"dogVaccines\": [\r\n    {\r\n       \"id\": 1,\r\n      \"type\": \"Vacina de Sinomose\",\r\n      \"value\": \"Sim\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -162,7 +175,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/Person",
+							"raw": "https://localhost:5001/api/Person/ListPerson",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -170,7 +183,8 @@
 							"port": "5001",
 							"path": [
 								"api",
-								"Person"
+								"Person",
+								"ListPerson"
 							]
 						}
 					},
@@ -183,7 +197,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"personName\": \"Maria\",\r\n  \"gender\": \"Feminino\",\r\n  \"dogList\": [\r\n    {\r\n      \"dogRace\": \"Labrador\",\r\n      \"dogName\": \"Splinter\",\r\n      \"gender\": \"M\",\r\n      \"dogVaccines\": [\r\n        {\r\n          \"type\": \"Vacina contra a gripe canina\",\r\n          \"value\": \"Sim\"\r\n          \r\n        },\r\n        {\r\n           \"type\": \"Vacina antirrábica\",\r\n          \"value\": \"Não\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"personName\": \"Gredimar\",\r\n  \"gender\": \"Feminino\"\r\n  \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -235,7 +249,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"id\": 2,\r\n        \"dogRace\": \"Salsicha\",\r\n        \"dogName\": \"Spike\",\r\n        \"gender\": \"masculino\",\r\n        \"dogVaccines\": [\r\n            {\r\n                \"id\": 2,\r\n                \"type\": \"Vacina De Raiva\",\r\n                \"value\": \"string\"\r\n            }\r\n        ]\r\n    }",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"personName\": \"Jeidiane\",\r\n    \"gender\": \"Feminino\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -243,7 +257,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/Person/PutPersonById/3",
+							"raw": "https://localhost:5001/api/Person/PutPersonById/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -253,7 +267,7 @@
 								"api",
 								"Person",
 								"PutPersonById",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -302,10 +316,15 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": 0,\r\n  \"type\": \"string\",\r\n  \"value\": \"string\"\r\n}"
+							"raw": "{\r\n  \"id\": 2,\r\n  \"type\": \"Vacina de Raiva\",\r\n  \"value\": \"Não\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/DogVaccines/PutDogVaccinesById/{id}",
+							"raw": "https://localhost:5001/api/DogVaccines/PutDogVaccinesById/2",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -315,7 +334,7 @@
 								"api",
 								"DogVaccines",
 								"PutDogVaccinesById",
-								"{id}"
+								"2"
 							]
 						}
 					},
@@ -328,7 +347,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"type\": \"string\",\r\n  \"value\": \"string\"\r\n}",
+							"raw": "{\r\n  \"type\": \"Vacina de Giárdia\",\r\n  \"value\": \"Sim\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -336,7 +355,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/DogVaccines/InsertDogVaccinesByIdDog",
+							"raw": "https://localhost:5001/api/DogVaccines/InsertDogVaccinesByIdDog/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -345,7 +364,8 @@
 							"path": [
 								"api",
 								"DogVaccines",
-								"InsertDogVaccinesByIdDog"
+								"InsertDogVaccinesByIdDog",
+								"1"
 							]
 						}
 					},
@@ -357,7 +377,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/DogVaccines/DeleteDogVaccinesById/",
+							"raw": "https://localhost:5001/api/DogVaccines/DeleteDogVaccinesById/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -367,7 +387,7 @@
 								"api",
 								"DogVaccines",
 								"DeleteDogVaccinesById",
-								""
+								"1"
 							]
 						}
 					},

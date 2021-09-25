@@ -10,16 +10,16 @@ namespace ProjetoFinalCachorroVacinas.Models
 
         public int Id { get; set; }
 
-        public string PersonName { get; set; } 
+        public string PersonName { get; set; }
 
         public string Gender { get; set; }
 
         public List<Dog> DogList { get; set; }
+
+
+
+
+
+
     }
-
- 
-
-
-
-
 }

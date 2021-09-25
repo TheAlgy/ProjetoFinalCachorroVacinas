@@ -110,5 +110,22 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         {
             return _context.Dogs.Any(e => e.Id == id);
         }
+
+
+        // GET: api/Dogs/InsertDogByPersonId
+        [HttpPost]
+        [Route("InsertDogByPersonId/{id}")]
+        public IActionResult InsertDogByPersonId([FromRoute] int id, [FromBody] Dog dog) 
+        {
+            var person = _context.Persons.Include(x => x.DogList).Where(x => x.Id == id).First();
+            person.DogList.Add(dog);
+            _context.Dogs.Add(dog);
+            _context.Persons.Update(person);
+            _context.SaveChanges();
+            return Ok(person);
+           
+           // _context.Persons.Include(x => x.DogList).ToList()
+        }
+
     }
 }

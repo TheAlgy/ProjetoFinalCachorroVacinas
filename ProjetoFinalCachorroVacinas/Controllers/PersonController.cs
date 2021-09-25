@@ -100,7 +100,6 @@ namespace ProjetoFinalCachorroVacinas.Controllers
 
             _context.Persons.Remove(person);
             _context.Dogs.RemoveRange(person.DogList);
-            //_context.DogVaccines.Remove(person.DogList.DogVaccines);
             _context.SaveChanges();
 
 

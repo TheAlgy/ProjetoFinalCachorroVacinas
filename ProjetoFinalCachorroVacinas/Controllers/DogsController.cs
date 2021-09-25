@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoFinalCachorroVacinas.Data;
 using ProjetoFinalCachorroVacinas.Models;
-using System.Collections.Generic;
 
 namespace ProjetoFinalCachorroVacinas.Controllers
 {
@@ -30,7 +28,7 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         // GET: api/Dogs/5
         [HttpGet]
         [Route("GetDogById/{id}")]
-        public IActionResult getid([FromRoute] int id)
+        public IActionResult GetDogById([FromRoute] int id)
         {
             var dog = _context.Dogs.Include(x => x.DogVaccines).Where(x => x.Id == id).ToList();
 
@@ -47,7 +45,7 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut]
         [Route("PutDogById/{id}")]
-        public IActionResult PutDog([FromRoute] int id, [FromBody] Dog dog)
+        public IActionResult PutDogById([FromRoute] int id, [FromBody] Dog dog)
         {
             if (id != dog.Id)
             {
@@ -55,13 +53,11 @@ namespace ProjetoFinalCachorroVacinas.Controllers
             }
 
             _context.Entry(dog).State = EntityState.Modified;
-            //var OriginalDog = _context.Dogs.Include(x => x.DogVaccines).FirstOrDefault(x => x.Id == id);
-            //OriginalDog = dog;
           
 
             try
             {
-                _context.SaveChangesAsync();
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -86,7 +82,7 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         public IActionResult PostDog([FromBody] Dog dog)
         {
             _context.Dogs.Add(dog);
-             _context.SaveChangesAsync();
+             _context.SaveChanges();
 
             return Created("", dog);
         }

@@ -1,6 +1,6 @@
 ﻿
 using System;
-using ProjetoFinalCachorroVacinas.Models;
+using System.Collections.Generic;
 
 namespace ProjetoFinalCachorroVacinas.Models
 {
@@ -12,11 +12,9 @@ namespace ProjetoFinalCachorroVacinas.Models
 
         public string PersonName { get; set; } 
 
-        public DateTime Birth { get; set; }
-
         public string Gender { get; set; }
 
-        public PostalAddress PostalAddress { get; set; } 
+        public List<Dog> DogList { get; set; }
     }
 
  

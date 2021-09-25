@@ -16,7 +16,6 @@ namespace ProjetoFinalCachorroVacinas.Data
 
         public DbSet<Dog> Dogs { get; set; }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<PostalAddress> PostalAddress { get; set; }
         public DbSet<DogVaccines> DogVaccines { get; set; }
     }
 }

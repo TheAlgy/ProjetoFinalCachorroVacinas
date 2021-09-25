@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "872a5350-813e-4df0-80c7-177ec02109ed",
+		"name": "ProjetoFinalCachorroVacina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dogs",
+			"item": [
+				{
+					"name": "ListDogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDogs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"DogRace\": \"Salsicha\",\r\n  \"dogName\": \"Spike\",\r\n  \"gender\": \"masculino\",\r\n  \"dogVaccines\": [\r\n    {\r\n      \"type\": \"Vacina De Raiva\",\r\n      \"value\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs/PostDog",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs",
+								"PostDog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDogsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "PutDogs",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"dogRace\": \"Salsicha\",\r\n        \"dogName\": \"Spike\",\r\n        \"gender\": \"masculino\",\r\n        \"dogVaccines\": [\r\n            {\r\n                \"id\": 2,\r\n                \"type\": \"Vacina De Raiva\",\r\n                \"value\": \"string\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs/PutDogById/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs",
+								"PutDogById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDogById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs/DeleteDogsById/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs",
+								"DeleteDogsById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertDogByPersonId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dogRace\": \"string\",\r\n  \"dogName\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"dogVaccines\": [\r\n    {\r\n      \"type\": \"string\",\r\n      \"value\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Dogs/InsertDogByPersonId/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Dogs",
+								"InsertDogByPersonId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "ListPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"personName\": \"Maria\",\r\n  \"gender\": \"Feminino\",\r\n  \"dogList\": [\r\n    {\r\n      \"dogRace\": \"Labrador\",\r\n      \"dogName\": \"Splinter\",\r\n      \"gender\": \"M\",\r\n      \"dogVaccines\": [\r\n        {\r\n          \"type\": \"Vacina contra a gripe canina\",\r\n          \"value\": \"Sim\"\r\n          \r\n        },\r\n        {\r\n           \"type\": \"Vacina antirrábica\",\r\n          \"value\": \"Não\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Person/PostPerson",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Person",
+								"PostPerson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPersonById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Person/GetPersonById/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Person",
+								"GetPersonById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPerson",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"dogRace\": \"Salsicha\",\r\n        \"dogName\": \"Spike\",\r\n        \"gender\": \"masculino\",\r\n        \"dogVaccines\": [\r\n            {\r\n                \"id\": 2,\r\n                \"type\": \"Vacina De Raiva\",\r\n                \"value\": \"string\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Person/PutPersonById/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Person",
+								"PutPersonById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePersonById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Person/DeletePersonById/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Person",
+								"DeletePersonById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DogVaccines",
+			"item": [
+				{
+					"name": "ListDogVaccines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "PutDogVaccinesById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"type\": \"string\",\r\n  \"value\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/DogVaccines/PutDogVaccinesById/{id}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"DogVaccines",
+								"PutDogVaccinesById",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertDogVaccinesByIdDog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"string\",\r\n  \"value\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/DogVaccines/InsertDogVaccinesByIdDog",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"DogVaccines",
+								"InsertDogVaccinesByIdDog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDogVaccinesById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/DogVaccines/DeleteDogVaccinesById/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"DogVaccines",
+								"DeleteDogVaccinesById",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

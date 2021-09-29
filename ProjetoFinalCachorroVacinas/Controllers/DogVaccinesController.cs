@@ -18,14 +18,14 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         {
             _context = context;
         }
-        
-        
-        // GET: api/Dogs/ListDogs
+
+
+        // GET: api/DogVaccines/ListDogVaccines
         [HttpGet]
         [Route("ListDogVaccines")]
         public List<DogVaccines> list() => _context.DogVaccines.ToList();
 
-        // PUT: api/Dogs/5
+        // PUT: api/DogVaccines/PutDogVaccinesById/{id}
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut]
         [Route("PutDogVaccinesById/{id}")]
@@ -63,7 +63,7 @@ namespace ProjetoFinalCachorroVacinas.Controllers
         }
 
 
-        // GET: api/Dogs/InsertDogByPersonId
+        // GET: api/DogVaccines/InsertDogVaccinesByIdDog/{id}
         [HttpPost]
         [Route("InsertDogVaccinesByIdDog/{id}")]
         public IActionResult InsertDogVaccinesByIdDog([FromRoute] int id, [FromBody] DogVaccines dogvaccines)
@@ -78,7 +78,7 @@ namespace ProjetoFinalCachorroVacinas.Controllers
             // _context.Persons.Include(x => x.DogList).ToList()
         }
 
-        // DELETE: api/DogVaccines/Delete
+        // DELETE: api/DogVaccines/DeleteDogVaccinesById/{id}
         [HttpDelete]
         [Route("DeleteDogVaccinesById/{id}")]
 

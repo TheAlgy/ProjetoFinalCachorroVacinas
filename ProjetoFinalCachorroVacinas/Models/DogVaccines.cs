@@ -8,7 +8,9 @@ namespace ProjetoFinalCachorroVacinas.Models
     {
 
         public int Id { get; set; }
+
+        public string nameVaccine { get; set; }
         public string Type { get; set; }
-        public string Value { get; set; }
+        public Boolean Vaccinated { get; set; }
     }
 }

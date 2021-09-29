@@ -36,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"DogRace\": \"Salsicha\",\r\n  \"dogName\": \"Spike\",\r\n  \"gender\": \"masculino\",\r\n  \"dogVaccines\": [\r\n    {\r\n      \"type\": \"Vacina De Raiva\",\r\n      \"value\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"DogRace\": \"Vira-lata\",\r\n  \"dogName\": \"Pi\",\r\n  \"gender\": \"masculino\",\r\n  \"dogVaccines\": [\r\n    {\r\n    \"nameVaccine\": \"Biovet Vermiveti\",\r\n    \"type\": \"Vermifugo\",\r\n    \"Vaccinated\": false\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -87,7 +87,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"dogRace\": \"Vira-Lata\",\r\n    \"dogName\": \"Amarelinho\",\r\n    \"gender\": \"M\",\r\n    \"dogVaccines\": [\r\n        {\r\n            \"id\": 1,\r\n            \"type\": \"Vacina De Raiva\",\r\n            \"value\": \"Sim\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"dogRace\": \"Vira-Lata\",\r\n    \"dogName\": \"Amarelinho\",\r\n    \"gender\": \"M\",\r\n    \"dogVaccines\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nameVaccine\": \"GJ Meds\",\r\n            \"type\": \"Verms\",\r\n            \"Vaccinated\": true\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -140,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n  \"dogRace\": \"Pastor Alemão\",\r\n  \"dogName\": \"Pitoco\",\r\n  \"gender\": \"M\",\r\n  \"dogVaccines\": [\r\n    {\r\n       \"id\": 1,\r\n      \"type\": \"Vacina de Sinomose\",\r\n      \"value\": \"Sim\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n\r\n  \"dogRace\": \"Pastor Alemão\",\r\n  \"dogName\": \"Pitoco\",\r\n  \"gender\": \"M\",\r\n  \"dogVaccines\": [\r\n    {\r\n    \r\n      \"nameVaccine\": \"Biovet Vermiveti\",\r\n      \"type\": \"Vermifugo\",\r\n      \"Vaccinated\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -197,7 +197,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"personName\": \"Gredimar\",\r\n  \"gender\": \"Feminino\"\r\n  \r\n}",
+							"raw": "{\r\n  \"personName\": \"Fernanda\",\r\n  \"gender\": \"Feminino\"\r\n  \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -302,10 +302,34 @@
 			"item": [
 				{
 					"name": "ListDogVaccines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/DogVaccines/ListDogVaccines",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"DogVaccines",
+								"ListDogVaccines"
+							]
+						}
 					},
 					"response": []
 				},
@@ -316,7 +340,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": 2,\r\n  \"type\": \"Vacina de Raiva\",\r\n  \"value\": \"Não\"\r\n}",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"nameVaccine\": \"Biovet Vermiveti\",\r\n  \"type\": \"Vermifugo\",\r\n  \"Vaccinated\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -324,7 +348,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/DogVaccines/PutDogVaccinesById/2",
+							"raw": "https://localhost:5001/api/DogVaccines/PutDogVaccinesById/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -334,7 +358,7 @@
 								"api",
 								"DogVaccines",
 								"PutDogVaccinesById",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -347,7 +371,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"type\": \"Vacina de Giárdia\",\r\n  \"value\": \"Sim\"\r\n}",
+							"raw": "{\r\n  \"nameVaccine\": \"GJ Med-D\",\r\n  \"type\": \"Gripe Canina\",\r\n  \"Vaccinated\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
